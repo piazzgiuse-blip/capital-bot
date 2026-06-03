@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: capital-bot
+    runtime: python310
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: EMAIL
+        value: giuseppepiazzolla43@gmail.com
+      - key: PASSWORD
+        value: Peppe2013$
+      - key: API_KEY
+        value: adefwHN077PxxrR3
+      - key: FLASK_ENV
+        value: production
+      - key: PORT
+        value: 5000
